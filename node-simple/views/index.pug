@@ -1,0 +1,15 @@
+html
+  head
+    title= title
+    link(rel="stylesheet", href="tachyons.min.css")
+  body.ph3.pt0.pb4.mw7.center.sans-serif
+    h1.f2.mb0 #[span.gold K]8s Test
+    p.f5.mt1.mb4.lh-copy A simple app to test k8s.
+    if notes.length > 0
+      ul.list.pl0
+        p.f6.b.db.mb2 Notes
+        each note in notes
+          li.mv3.bb.bw2.b--light-yellow.bg-washed-yellow.ph4.pv2
+            p.measure!= note.description
+    else
+      p.lh-copy.f6 You don't have any notes yet.
